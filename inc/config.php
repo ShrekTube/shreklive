@@ -38,6 +38,6 @@ $sitetitle = "Rachni Stream"; // max 16 characters
 $sitesubtitle = "Rachni Streaming Site"; // currently only used for email template
 
 // Sets the from/reply email address for notification emails. Edit as needed, following the proper "DisplayName <email@address.com>" syntax. Display name is optional
-$from_email = $sitetitle . ' <changeme@exmaple.com>';
-$reply_email = 'changeme@exmaple.com';
-$bcc_email = $sitetitle . ' Admin <changeme@exmaple.com>';
+$from_email = $sitetitle . ' <shrektubeindustries@gmail.com>';
+$reply_email = 'shrektubeindustries@gmail.com';
+$bcc_email = $sitetitle . ' Admin <shrektubeindustries@gmail.com>';
