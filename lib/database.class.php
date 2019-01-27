@@ -10,11 +10,11 @@
 class database {
 
 	// Connection params
-	private $host = 'localhost';
+	private $host = 'ec2-107-22-238-186.compute-1.amazonaws.com';
 	private $port = '5432';
-	private $user = '';
-	private $password = '';
-	private $dbname = '';
+	private $user = 'tsddbxspfpwajb';
+	private $password = 'dc150d7d826eb0a3675e7346b986b5ab10408e5e4dbfc41f45d6efd1bb207140';
+	private $dbname = 'd2h9ru23534k8p';
 	
 	// This can be accessed by the database class and any class that extends database by using $this->link
 	public $link;
