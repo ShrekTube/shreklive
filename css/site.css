@@ -1,0 +1,319 @@
+/* Fancy hover effects for channel view */
+
+.grid figure {
+	position: relative;
+	overflow: hidden;
+	margin: 10px 1%;
+	background: rgb(48, 133, 163);
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 10px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0);
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+	font-size: 30px;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/*---------------*/
+/***** Sarah *****/
+/*---------------*/
+
+figure.effect-sarah {
+	background: rgb(78, 93, 108);
+}
+
+figure.effect-sarah img {
+	max-width: none;
+	width: -webkit-calc(100% + 20px);
+	width: calc(100% + 20px);
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-10px, 0, 0);
+	transform: translate3d(-10px, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-sarah:hover img {
+	opacity: 0.4;
+	/*-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);*/
+}
+
+figure.effect-sarah figcaption {
+	text-align: left;
+}
+
+figure.effect-sarah h2 {
+	position: relative;
+	overflow: hidden;
+	padding: 20px 25px 15px 25px;
+}
+
+figure.effect-sarah h2::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: rgb(255, 255, 255);
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}
+
+figure.effect-sarah:hover h2::after {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+figure.effect-sarah p {
+	padding: 10px 25px;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+
+figure.effect-sarah:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+figure.effect-sarah label {
+	position: absolute;
+	right: 55px;
+	bottom: 10px;
+	padding: 2px;
+	height: 30px;
+	opacity: 0;
+	text-shadow: none;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+
+figure.effect-sarah label i {
+	position: relative;
+	left: 80%;
+}
+
+figure.effect-sarah label span {
+	position: relative;
+	left: 80%;
+	top: -5px;
+}
+
+figure.effect-sarah:hover label {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.video-container {
+	width: 80%;
+	height: 100%;
+}
+
+.chat-container {
+	margin: 0;
+	width: 20%;
+	height: 100%;
+}
+
+.stream-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.full-height {
+	height: 100%;
+}
+
+.fill {
+	height: 100%;
+	width: 100%;
+}
+
+.fill-popout {
+	width: 100%;
+	height: calc(100vh - 56px);
+}
+
+.chatBorder {
+	border: rgb(0, 188, 212) 1px solid;
+	width: 96%;
+	margin: auto;
+}
+
+.mdl-content__full-height {
+	width: 100%;
+	height: calc(100vh - 56px);
+}
+
+.mdl-content__settings {
+	width: 100%;
+}
+
+.mdl-typography--text-nowrap-ellipsis {
+	white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	padding-right: 10px !important;
+	width: 224px;
+}
+
+.live-player {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.dm-logo-header {
+	background-image: url("../img/logo.png") !important;
+	color: rgb(0, 188, 212) !important;
+	text-shadow: 2px 2px 2px rgb(0, 0, 0) !important;
+	letter-spacing: 7px !important;
+	font-size: 13px !important;
+	text-align: right !important;
+	line-height: 90px !important;
+}
+
+.forgot-pass {
+	padding-top: 10px;
+}
+
+.force_link {
+	cursor: pointer;
+}
+
+.sendbutton {
+	color: rgb(255, 255, 255);
+	position: absolute;
+	top: 20px;
+	right: 10px;
+}
+
+.sendbuttonicon {
+	font-size: 0.75em;
+}
+
+.chatbox {
+	padding: 0 45px 0 20px;
+	width: 100%;
+}
+
+.chatbox .mdl-textfield {
+	width: 85%;
+}
+
+#output a {
+	color: rgb(96, 196, 150);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.keyCopy-toast {
+	border-radius: 3px;
+}
+
+.keyCopy-text {
+	margin: auto;
+	color: rgb(0, 188, 212);
+}
+
+.keyCopy-action {
+	padding: 5px;
+}
+
+/* Rules for sizing material icons */
+.material-icons.md-16 {
+	font-size: 16px;
+}
+
+.material-icons.md-18 {
+	font-size: 18px;
+}
+
+.material-icons.md-24 {
+	font-size: 24px;
+}
+
+.material-icons.md-36 {
+	font-size: 36px;
+}
+
+.material-icons.md-48 {
+	font-size: 48px;
+}
+
+.copyIcon {
+	vertical-align: middle;
+	margin-left: auto;
+}
